@@ -1,0 +1,465 @@
+header{
+    background: #053159;
+    height: 66px;
+}
+h1, h2, h3, h4, h5, h6{
+    color: #053159;
+    margin: 5px;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+
+}
+/* nav bar*/
+.text-input{
+
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    line-height: 1.5rem;
+    border: 1px solid #053159;
+}
+
+.btn{
+    padding: .5rem;
+    background: #053159;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    border: 1px solid #053159;
+    font-size: 1.08em;
+
+
+}
+
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*färg bakgrund av navbar + att den går enda ut till kanterna*/
+body{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background: #f6f6f6;
+
+}
+/*Färg på text till vit*/
+
+header *{
+    color: white;
+}
+
+/*design för logo*/
+
+header .logo{
+
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+
+}
+
+/*Meddelande för registrering*/
+.msg{
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border: 5px;
+    list-style: none;
+}
+
+.success{
+    color: green;
+    border: 1px solid green;
+    background: #a3eaa3;
+    border-radius: 5px;
+
+}
+
+.error{
+
+    color: red;
+    border: 1px solid red;
+    background: #e8b4b4;
+    border-radius: 5px;
+}
+
+/*design för navbar*/
+header ul{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+/*design för navbar*/
+header ul li{
+    float: left;
+    position: relative;
+;
+}
+/*design för navbar*/
+header ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+/*När man har musen över alternativ i nav bar*/
+header ul li a:hover{
+
+    background: skyblue;
+    transition: 0.5s;
+}
+
+header.menu-toggle{
+    display: none;
+}
+
+/*design för drop down meny*/
+header ul li ul{
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 88888;
+}
+
+header ul li:hover ul{
+    display: block;
+}
+
+/*Så att alternativen i rullgardins menyn går till kanten av sidan*/
+header ul li ul li{
+    width: 100%;
+
+}
+/*gör dem lägre*/
+header ul li ul li a{
+padding: 10px;
+    background: white;
+    color:#444;
+ }
+
+/*logga ut knappen röd*/
+header ul li ul li a.logout{
+   color: red;
+}
+
+/*bakgrundsfärg*/
+header ul li ul li a:hover{
+background: lightgray ;
+ }
+
+
+/*Så att fottern hamnar längs ner fast det inte är någon content*/
+.page-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.page-wrapper a:hover{
+    color: skyblue;
+}
+/*design för slider/karusell*/
+.post-slider{
+    position: relative;
+
+}
+
+.post-slider .next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color: #053159;
+    cursor: pointer;
+
+}
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: #053159;
+    cursor: pointer;
+
+}
+
+.post-slider .post-wrapper{
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+
+}
+
+.post-slider .slider-title{
+    text-align: center;
+    margin: 30px auto;
+
+
+}
+.post-slider .post-wrapper .post{
+    display: inline-block;
+    width: 300px;
+    margin: 0px 10px;
+    background: #white;
+    height: 330px;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+
+}
+
+.post-slider .post-wrapper .post .post-info{
+    height: 130px;
+    padding: 0px 5px
+}
+.post-slider .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/*design för inlägg, "content*/
+
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+.content .main-content{
+    width: 70%;
+    float: left;
+}
+
+/*Ändrar rubrik på single.html fil*/
+.content .main-content.single{
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+
+
+}
+
+/*Design av texten som användaren skriver in i sitt inlägg*/
+.content .main-content.single .post-title{
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+/*Design för populära inlägg*/
+.content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+
+/*Bilderna under "Populära inlägg"*/
+.content .popular .post img{
+    height: 75px;
+    width: 75px;
+    float: left;
+    margin-right: 10px;
+}
+
+.content .popular .post{
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10 px;
+    padding-top: 10px;
+}
+.content .main-content .post .read-more{
+position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: transparent;
+    border-radius: 5px;
+    color: #053159 !important;
+}
+.content .main-content .post .read-more:hover{
+    background: #053159;
+    color: white !important;
+    transition: .25s;
+}
+
+/*inlägg*/
+
+.content .main-content .post .post-review{
+
+    padding: 10px;
+    width: 60%;
+    float: right;
+}
+
+/*Hur stor plats bilden tar*/
+.content .main-content .post-image{
+    width: 40%;
+    height: 100%;
+    float: left;
+
+}
+.content.main-content.recent-post-title{
+    margin: 20px;
+}
+
+/*Design av "ämne" delen*/
+.content .sidebar{
+    width: 30%;
+    float: left;
+    height: 300px;
+
+}
+
+/*Så att rubrik inte går ihop med "Ämne" på single.html*/
+.content .sidebar.single{
+    padding: 0px 10px;
+
+}
+
+/* sökbaren*/
+.content .sidebar .section{
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+.content .sidebar .section .section-title{
+    margin: 10px 0px 10px 0px;
+}
+
+/* så att "sök" rutan är i sama höjd som "senaste inlägg"*/
+.content .sidebar .section.search{
+    margin-top:62px;
+}
+
+/* design alla kategorier under ämnen*/
+
+.content .sidebar .section.topics ul{
+
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-bottom: 1px solid #e0e0e0;
+
+}
+
+/* design alla kategorier under ämnen*/
+.content .sidebar .section.topics ul li a{
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s;
+
+}
+/* animation när man håller över ämnen under sökbaren*/
+.content .sidebar .section.topics ul li a:hover{
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+
+
+/*Registrering*/
+
+/*Ändrar design och storlek på registrering*/
+.auth-content {
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+}
+
+/*Rubrik på formulär i registrering*/
+.auth-content .form-title{
+    text-align: center;
+}
+/*Större mellanrum mellan alla fälten i formuläret*/
+.auth-content form div{
+    margin-bottom: 10px;
+}
+.auth-content form p{
+    text-align: center;
+}
+
+/* Gör så att logga in knappen ser ut som en länk */
+.auth-content form  p a{
+text-decoration: underline;
+}
+
+
+/*bakgrundsfärg*/
+.fotter{
+
+    background: #053159;
+    color: #d3d3d3;
+    height: 50px;
+    margin-top: auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries, när skärmen blir mindre*/
+@media only screen and (max-width: 750px){
+    header ul {
+
+        width: 100%;
+        background:#053159 ;
+    }
+    header ul li{
+        width: 100%;
+
+    }
+
+    header ul li ul{
+        position: static;
+        display: block;
+        width: 100%;
+    }
+    header ul li ul li a{
+        padding: 10px;
+        background:#053159;
+        color: white;
+        padding-left: 50px;
+    }
+    header
+    ul li ul li a.logout{
+        color: red;
+    }
+
+}
